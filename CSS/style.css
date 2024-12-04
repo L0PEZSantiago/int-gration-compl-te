@@ -1,0 +1,581 @@
+:root {
+    --soft-violet: hsl(277, 64%, 61%);
+    --linear-gradient-for-storys: linear-gradient(45deg, #FFC593, #BC7198, #5A77FF);
+    --white: hsl(0, 0%, 100%);
+    --white-for-hr: hsla(0, 0%, 100%, 0.25);
+    --black: hsl(0, 0%, 0%);
+    --paragraph-on-bg-white: hsla(0, 0%, 0%, 0.60);
+    --hover-color-black-btn: #DFDFDF;
+    --color-main-heading-stats: hsla(0, 50%, 1%, 0.75);
+    --color-main-paragraph: hsla(0, 0%, 100%, 0.6);
+    --linear-gradient-white-to-black: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.66));
+    --size-for-h2: 2.5rem;
+    --size-for-h3: 1.5rem;
+    --size-for-li-and-btn: 12px;
+    --size-for-paragraph: 15px;
+    --size-for-story-name: 13px;
+    --paragraph-large: 1.25rem;
+    --paragraph-medium: 1rem;
+    --paragraph-small: 0.875rem;
+
+}
+
+* {
+    list-style-type: none;
+    padding-inline-start: 0;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------ HERO ------------ */
+
+.hero {
+    display: flex;
+    height: 600px;
+}
+
+
+/* ------------ HERO FIRST CHILD ------------ */
+
+.hero:first-child {
+    height: 650px;
+}
+
+.hero:first-child .title_quote {
+    width: 65%;
+}
+
+.hero:first-child .container_hero_desc {
+    background-color: var(--black);
+    height: 100%;
+    color: var(--white);
+}
+
+.hero:first-child .button_arrow img {
+    filter: invert(1);
+}
+
+.hero:first-child .button_arrow h4 {
+    color: var(--white);
+}
+
+.hero:first-child blockquote {
+    color: var(--color-main-paragraph);
+}
+
+
+/* ------------ END HERO FIRST CHILD ------------ */
+
+
+/* ------------ START GLOBAL HERO  ------------ */
+
+.container_hero_desc {
+    flex-grow: 1;
+}
+
+
+.container_hero_desc h2,
+h4 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.title_quote {
+    text-align: left;
+    width: 70%;
+}
+
+#hero_bg_white h2 {
+    width: 72%;
+}
+
+#hero_bg_white blockquote {
+    width: 90%;
+}
+
+.title_quote blockquote {
+    font-weight: 300;
+    margin: 0;
+    font-size: var(--size-for-paragraph);
+    color: var(--paragraph-on-bg-white);
+}
+
+.title_quote h4 {
+    color: var(--black);
+}
+
+.button_arrow a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.container_hero_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ------------ END GLOBAL HERO  ------------ */
+
+
+/* ------------ START STORIES ------------ */
+.story_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 500px;
+}
+
+.story_cards article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.story_cards article::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    /* Par défaut, pas visible */
+    background: linear-gradient(45deg, #FFC593, #BC7198, #5A77FF);
+    transition: height 0.3s ease-in-out;
+    /* Transition fluide sur la hauteur */
+    z-index: 1;
+}
+
+.story_cards article p,
+h3 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    margin-top: 2rem;
+    border: none;
+    border-bottom: solid 2px var(--white-for-hr);
+}
+
+/* START BACKGROUNDS IMAGES FOR STORYS */
+
+
+.story_cards article {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.story_cards article:first-child {
+    background-image: var(--linear-gradient-white-to-black), url(/assets/stories/desktop/mountains.jpg);
+}
+
+.story_cards article:nth-child(2) {
+    background-image: var(--linear-gradient-white-to-black), url(/assets/stories/desktop/cityscapes.jpg);
+}
+
+.story_cards article:nth-child(3) {
+    background-image: var(--linear-gradient-white-to-black), url(/assets/stories/desktop/18-days-voyage.jpg);
+}
+
+.story_cards article:nth-child(4) {
+    background-image: var(--linear-gradient-white-to-black), url(/assets/stories/desktop/architecturals.jpg);
+}
+
+/* END BACKGROUNDS IMAGES FOR STORYS */
+
+.story_desc {
+    box-sizing: border-box;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.read_story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.read_story img {
+    filter: invert(1);
+}
+
+.read_story h4 {
+    color: var(--white);
+}
+
+.story_desc p {
+    font-size: var(--size-for-story-name);
+}
+
+/* ------------ END STORIES ------------ */
+
+
+/* ------------ START FEATURES ------------ */
+
+.main_features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 5rem 0;
+}
+
+.container_features {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+    padding: 4rem;
+}
+
+.container_features article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+
+.container_features article p {
+    margin: 0;
+}
+
+.container_features article {
+    box-sizing: border-box;
+}
+
+.container_features article:nth-child(2) img, .container_features article:nth-child(2) h3 {
+    margin-top: 18px;
+}
+
+.feature_no_limit {
+    margin: 2.5rem;
+}
+
+.feature_no_limit>.features_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature_no_limit>.features_image img {
+    margin-bottom: 4rem;
+}
+
+.container_features article p {
+    color: var(--paragraph-on-bg-white);
+    text-align: center;
+    font-size: var(--size-for-paragraph);
+    line-height: 1.56rem;
+}
+
+/* ------------ END FEATURES ------------ */
+
+
+/* ------------ START HOVERS ------------ */
+
+ul li:hover {
+    cursor: pointer;
+    color: var(--hover-color-black-btn);
+}
+
+
+.transparent_btn_white:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--white);
+}
+
+.transparent_btn:hover {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.black_btn:hover {
+    background-color: var(--hover-color-black-btn);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.story_cards article:hover {
+    cursor: pointer;
+    transform: translateY(-10%);
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+    transition: all 0.3s ease-in-out;
+}
+
+.story_cards article:hover::after {
+    height: 0.6rem;
+    /* La "bordure" apparaît au hover */
+}
+
+#facebook:hover {
+    fill: #3B5998;
+    cursor: pointer;
+}
+
+#twitter:hover {
+    fill: #00ACEE;
+    cursor: pointer;
+}
+
+#instagram:hover {
+    fill: #C13584;
+    cursor: pointer;
+}
+
+/* ------------ END HOVERS ------------ */
+
+
+/* ------------ START MEDIA QUERIES TABLET ------------ */
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+
+    
+
+    .hero {
+        width: 768px;
+        position: relative;
+    }
+
+    .container_hero_desc {
+        width: 55%;
+    }
+
+    .hero:first-child .hero_image {
+        width: 50%;
+    }
+
+    .hero_image {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .hero:nth-child(2) .hero_image:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/assets/home/desktop/beautiful-stories.jpg');
+        background-size: cover;
+        /* L'image couvre toujours tout */
+        background-position: 30%;
+        background-repeat: no-repeat;
+        transform: scale(1);
+        /* Dézoome l'intérieur de l'image */
+        transform-origin: center;
+        /* Centre le dézoom */
+    }
+
+    .hero:first-child .container_hero_desc {
+        width: 100%;
+        height: auto;
+    }
+
+    #hero_bg_white h2 {
+        width: 88%;
+    }
+
+    .story_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: calc(100% / 2);
+        height: 1000px;
+        background-size: contain;
+    }
+
+
+
+    .container_features {
+        flex-direction: column;
+        width: 61%;
+        padding: 2rem 0;
+    }
+
+}
+
+/* ------------ END MEDIA QUERIES TABLET ------------ */
+
+
+
+/* ------------ START MEDIA QUERIES MOBILE ------------ */
+
+@media screen and (max-width: 375px) {
+
+    html {
+        font-size: 12.8px;
+    }
+
+    .hero:first-child, .hero {
+        display: flex;
+        height: auto;
+    }
+    
+    
+    /* ------------ HERO START ------------ */
+    
+
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    body > main > section:nth-child(2) {
+        flex-direction: column;
+    }
+    
+    .hero:first-child .title_quote, .hero .title_quote {
+        width: 100%;
+    }
+
+    .hero .container_hero_desc {
+        box-sizing: border-box;
+       padding: 72px 24px 72px 33px;
+    }
+
+
+    /* Je défini une hauteur pour la div, car vu qu'elle n'est pas dans le html, la div ne s'adapte pas au contenu */
+    .hero .hero_image {
+        height: 300px;
+    }
+
+    .hero_image img {
+        display: none;
+    }
+
+
+    body > main > section > div.hero_image {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    section:first-child > div.hero_image {
+        background-image: url(/assets/home/mobile/create-and-share.jpg);
+        
+    }
+
+    body > main > section:nth-child(2) > div.hero_image {
+        background-image: url(/assets/home/mobile/beautiful-stories.jpg);
+
+    }
+
+    body > main > section:nth-child(3) > div.hero_image {
+        background-image: url(/assets/home/mobile/designed-for-everyone.jpg);
+    }
+
+    .button_arrow a {
+        margin: 0;
+        margin-top: 23px;
+    }
+
+    /* ------------ HERO END ------------ */
+
+
+    /* ------------ STORYS START ------------ */
+
+    .story_cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: calc(100% / 4);
+        height: 1500px;
+    }
+
+    .story_cards h4 {
+        margin: 0;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+
+    .story_desc {
+    padding: 0 32px 40px 33px;
+    }
+
+   
+
+    .story_cards article:first-child {
+        background-image: var(--linear-gradient-white-to-black), url(/assets/stories/mobile/mountains.jpg);
+    }
+    
+    .story_cards article:nth-child(2) {
+        background-image: var(--linear-gradient-white-to-black), url(/assets/stories/mobile/cityscapes.jpg);
+    }
+    
+    .story_cards article:nth-child(3) {
+        background-image: var(--linear-gradient-white-to-black), url(/assets/stories/mobile/18-days-voyage.jpg);
+    }
+    
+    .story_cards article:nth-child(4) {
+        background-image: var(--linear-gradient-white-to-black), url(/assets/stories/mobile/architecturals.jpg);
+    }
+
+
+
+    /* ------------ STORYS END ------------ */
+
+
+    /* ------------ FEATURES START ------------ */
+    .main_features {
+        padding: 60px 0;
+    }
+
+    .container_features {
+        flex-direction: column;
+        align-items: center;
+        width: 375px;
+        box-sizing: border-box;  
+        padding: 0;
+    }
+
+   .container_features article {
+    margin: 39px;
+   }
+
+   .container_features article img {
+    margin-bottom: 48px;
+   }
+
+   .container_features article:nth-child(2) img {
+    margin: 0;
+    margin-bottom: 66px;
+   }
+
+   .container_features article h3 {
+    margin-bottom: 16px;
+   }
+
+}
+
+   
+
+/* ------------ END MEDIA QUERIES MOBILE ------------ */
