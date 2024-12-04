@@ -73,7 +73,9 @@ footer div{
     margin: 0;
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+/* ------------ MEDIA QUERIES TABLET START  ------------ */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
    .menu_footer_list_reponsive ul li {
         color: white;
     }
@@ -116,7 +118,11 @@ footer div{
     
 }
 
-@media screen and (max-width: 375px) {
+/* ------------ END MEDIA QUERIES TABLET  ------------ */
+
+/* ------------ MEDIA QUERIES MOBILE START ------------ */
+
+@media screen and (max-width: 767px) {
 
     footer {
         grid-template-columns: 1fr;
@@ -175,3 +181,4 @@ footer div{
     }
 }
 
+/* ------------ MEDIA QUERIES MOBILE END ------------ */

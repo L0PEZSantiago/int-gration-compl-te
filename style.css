@@ -347,7 +347,7 @@ ul li:hover {
 
 /* ------------ START MEDIA QUERIES TABLET ------------ */
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
 
     
 
@@ -430,7 +430,7 @@ ul li:hover {
 
 /* ------------ START MEDIA QUERIES MOBILE ------------ */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
 
     html {
         font-size: 12.8px;

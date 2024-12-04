@@ -54,7 +54,10 @@ ul, a {
     font-weight: 600;
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+
+/* ---------------- MEDIA QUERIES TABLET ---------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
     nav {
         width: 100%;
         padding: 1rem 2rem; 
@@ -65,7 +68,10 @@ ul, a {
     }
 }
 
-@media screen and (max-width: 375px) {
+
+/* ---------------- MEDIA QUERIES MOBILE ---------------- */
+
+@media screen and (max-width: 767px) {
     nav ul, nav a {
         display: none;
     }
