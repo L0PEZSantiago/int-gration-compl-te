@@ -1,0 +1,269 @@
+@import url('variables.css');
+
+* {
+    list-style-type: none;
+    padding-inline-start: 0;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------ BANNIERE ------------ */
+
+.banniere {
+    background-image: url("../assets/stories/desktop/moon-of-appalacia.jpg");
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container_title_banniere {
+    margin-left: 7rem;
+    width: 24.18rem;
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: var(--hover-color-black-btn);
+}
+
+.container_title_banniere strong {
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: var(--size-for-li-and-btn);
+    letter-spacing: 2px;
+
+}
+
+.container_title_banniere h2 {
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: var(--size-for-h2);
+    line-height: 48px;
+    letter-spacing: 0.29rem;
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+
+.date_author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    color: var(--white);
+    font-size: var(--size-for-li-and-btn);
+    gap: 9px;
+}
+
+h5, .date_author p {
+    font-size: var(--size-for-story-name);
+}
+
+h5 {
+    font-weight: 400;
+}
+
+.date_author p:first-of-type {
+    font-weight: 400;
+    opacity: 0.75;
+}
+
+.container_title_banniere > p:nth-of-type(2) {
+    font-size: var(--size-for-paragraph);
+    color: #FFF;
+    line-height: 25px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.transparent_btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 2rem;
+    color: var(--white);
+    font-size: var(--size-for-li-and-btn);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.transparent_btn img {
+    filter: invert(1);
+}
+
+.transparent_btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ------------ END BANNIERE ------------ */
+
+/* ------------ STORIES ------------ */
+
+.story_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: calc(2000px / 4);
+    min-height: 2000px;
+}
+
+.story_cards article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.story_cards article::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    /* Par défaut, pas visible */
+    background: linear-gradient(45deg, #FFC593, #BC7198, #5A77FF);
+    transition: height 0.3s ease-in-out;
+    /* Transition fluide sur la hauteur */
+    z-index: 1;
+}
+
+
+.black_btn:hover {
+    background-color: var(--hover-color-black-btn);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.story_cards article:hover {
+    cursor: pointer;
+    transform: translateY(-10%);
+    filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+    transition: all 0.3s ease-in-out;
+}
+
+.story_cards article:hover::after {
+    height: 0.6rem;
+    /* La "bordure" apparaît au hover */
+}
+
+.story_cards h3 {
+    font-size: 1.125rem;
+}
+
+.story_cards article h5,
+h3 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    letter-spacing: 2px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    border: none;
+    border-bottom: solid 2px var(--white-for-hr);
+}
+
+.story_desc {
+    box-sizing: border-box;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.read_story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 1.2rem 0;
+}
+
+.read_story img {
+    filter: invert(1);
+}
+
+.read_story h4 {
+    color: var(--white);
+}
+
+.story_desc p {
+    font-size: var(--size-for-story-name);
+}
+
+
+article:first-child {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/mountains.jpg");
+}
+
+article:nth-child(2) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/cityscapes.jpg");
+}
+
+article:nth-child(3) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/18-days-voyage.jpg");
+}
+
+article:nth-child(4) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/architecturals.jpg");
+}
+
+article:nth-child(5) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/world-tour.jpg");
+}
+
+article:nth-child(6) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/unforeseen-corners.jpg");
+}
+
+article:nth-child(7) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/king-on-africa.jpg");
+}
+
+article:nth-child(8) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/trip-to-nowhere.jpg");
+}
+
+article:nth-child(9) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/rage-of-the-sea.jpg");
+}
+
+article:nth-child(10) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/running-free.jpg");
+}
+
+article:nth-child(11) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/behind-the-waves.jpg");
+    }
+
+article:nth-child(12) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/calm-waters.jpg");
+}
+
+article:nth-child(13) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/milky-way.jpg");
+}
+
+article:nth-child(14) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/dark-forest.jpg");
+}
+
+article:nth-child(15) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/somwarpet.jpg");
+}
+
+article:nth-child(16) {
+    background-image: var(--linear-gradient-white-to-black), url("../assets/stories/desktop/land-of-dreams.jpg");
+}
+
+
+
+
